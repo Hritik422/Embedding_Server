@@ -14,7 +14,7 @@ model = TextEmbedding(
 class EmbeddingRequest(BaseModel):
     text: str
     # Dict[str, Any] allows context to accept any valid JSON object/dictionary
-    context: Optional[Dict[str, Any]] = None  
+    context: Optional[Any] = None  
 
 @app.post("/embed")
 def get_embedding(payload: EmbeddingRequest):
