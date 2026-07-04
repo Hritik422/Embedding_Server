@@ -23,5 +23,6 @@ def get_embedding(payload: EmbeddingRequest):
     
     return {
         "embedding": embedding_list, 
-        "context": payload.context
+        "context": payload.context,
+        "userInput": payload.text
     }
