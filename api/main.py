@@ -20,4 +20,4 @@ def get_embedding(payload: EmbeddingRequest):
     embeddings_generator = model.embed([payload.text])
     embedding_list = list(embeddings_generator)[0].tolist()
     
-    return {"embedding": embedding_list}
+    return {"embedding": embedding_list, "context": payload.context}
